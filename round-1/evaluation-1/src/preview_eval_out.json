@@ -1,0 +1,370 @@
+{
+  "metadata": {
+    "evaluation_name": "Percolation vs Fixed-Ratio Extractive Summarization",
+    "n_documents": 2000,
+    "thetas": [
+      0.6,
+      0.7,
+      0.8
+    ],
+    "fixed_ratios": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "verdict": {
+      "hypothesis_supported": false,
+      "best_percolation_theta": 0.9,
+      "best_fixed_ratio": 0.3,
+      "best_percolation_rouge1r_mean": 0.8800529719839355,
+      "best_fixed_rouge1r_mean": 0.7282250454815423,
+      "rouge1_recall_improvement": 0.15182792650239318,
+      "rouge1_significant": true,
+      "compression_ratio_variable": false,
+      "p_best_pair_wilcoxon": 0.0,
+      "notes": "Percolation threshold method compared to fixed-ratio TF baselines. Best theta=0.9, best fixed=0.3. ROUGE-1 recall improvement=0.1518. Compression std=0.0834 (<= 0.10). Wilcoxon rouge1 significant: Tru..."
+    },
+    "rouge_summary_table": [
+      {
+        "method": "percolation@0.6",
+        "rouge1_r_mean": 0.7877119217522431,
+        "rouge1_r_std": 0.11776949748853355,
+        "rouge2_r_mean": 0.3901979342092884,
+        "rouge2_r_std": 0.16551665909070004,
+        "rougeL_r_mean": 0.5441669494904083,
+        "rougeL_r_std": 0.13641496578268056,
+        "rouge1_f_mean": 0.2135517099790986,
+        "rouge1_f_std": 0.0957824125461767,
+        "rouge2_f_mean": 0.1066853391694097,
+        "rouge2_f_std": 0.07244173612407276,
+        "rougeL_f_mean": 0.14643765084769955,
+        "rougeL_f_std": 0.07314896118255508
+      },
+      {
+        "method": "percolation@0.7",
+        "rouge1_r_mean": 0.8253759861802228,
+        "rouge1_r_std": 0.10629181125921237,
+        "rouge2_r_mean": 0.42771524656445037,
+        "rouge2_r_std": 0.16682226878036907,
+        "rougeL_r_mean": 0.5821756216330971,
+        "rougeL_r_std": 0.13654480267412641,
+        "rouge1_f_mean": 0.19416249862880222,
+        "rouge1_f_std": 0.09037069764748011,
+        "rouge2_f_mean": 0.10164252761131365,
+        "rouge2_f_std": 0.06957460161430377,
+        "rougeL_f_mean": 0.13608016899428185,
+        "rougeL_f_std": 0.07078912271625076
+      },
+      {
+        "method": "percolation@0.8",
+        "rouge1_r_mean": 0.856147797911593,
+        "rouge1_r_std": 0.09635814247252894,
+        "rouge2_r_mean": 0.4618278739388252,
+        "rouge2_r_std": 0.16819539212573587,
+        "rougeL_r_mean": 0.6132036350121072,
+        "rougeL_r_std": 0.13592713446830648,
+        "rouge1_f_mean": 0.17760057841500554,
+        "rouge1_f_std": 0.08535969783249059,
+        "rouge2_f_mean": 0.09679383094617765,
+        "rouge2_f_std": 0.06626254627063267,
+        "rougeL_f_mean": 0.12643995003766959,
+        "rougeL_f_std": 0.06736587589718242
+      }
+    ],
+    "wilcoxon_tests": [
+      {
+        "method_a": "percolation@0.6",
+        "method_b": "fixed@10pct",
+        "metric": "rouge1_r",
+        "statistic": 1986887.0,
+        "p_raw": 0.0,
+        "p_corrected": 0.0,
+        "significant": true
+      },
+      {
+        "method_a": "percolation@0.6",
+        "method_b": "fixed@10pct",
+        "metric": "rouge2_r",
+        "statistic": 1867278.0,
+        "p_raw": 0.0,
+        "p_corrected": 0.0,
+        "significant": true
+      },
+      {
+        "method_a": "percolation@0.6",
+        "method_b": "fixed@10pct",
+        "metric": "rougeL_r",
+        "statistic": 1951280.0,
+        "p_raw": 0.0,
+        "p_corrected": 0.0,
+        "significant": true
+      }
+    ],
+    "compression_ratio_stats": {
+      "overall": {
+        "mean": 0.7781767715737826,
+        "std": 0.08335260163911332,
+        "min": 0.1111111111111111,
+        "max": 1.0,
+        "p25": 0.7293504901960783,
+        "p50": 0.7857142857142857,
+        "p75": 0.8333333333333334,
+        "std_exceeds_10pp": false
+      },
+      "cnn": {
+        "mean": 0.7974432022145931,
+        "std": 0.08808317801850661,
+        "min": 0.1111111111111111,
+        "max": 1.0,
+        "p25": 0.75,
+        "p50": 0.8,
+        "p75": 0.8571428571428571
+      },
+      "dailymail": {
+        "mean": 0.7581239560088575,
+        "std": 0.07290475240459307,
+        "min": 0.3548387096774194,
+        "max": 0.971830985915493,
+        "p25": 0.7138392857142857,
+        "p50": 0.7647058823529411,
+        "p75": 0.8095238095238095
+      },
+      "std_exceeds_10pp": false,
+      "best_theta_used": 0.9
+    },
+    "regression": {
+      "r2": 0.10046996018983756,
+      "best_theta": 0.9,
+      "features": [
+        "avg_degree",
+        "clustering_coefficient",
+        "graph_density"
+      ],
+      "coefficients": [
+        -0.0012049048448540597,
+        0.00555475506124143,
+        0.0168063913391535
+      ],
+      "intercept": 0.7781767715737823,
+      "correlations": {
+        "pearson": {
+          "avg_degree": {
+            "r": 0.0991163685737527,
+            "p": 8.963086295082942e-06
+          },
+          "clustering_coefficient": {
+            "r": 0.20186045416913148,
+            "p": 7.807448656959291e-20
+          },
+          "graph_density": {
+            "r": 0.23029365546336666,
+            "p": 1.7499616215075695e-25
+          },
+          "num_nodes": {
+            "r": -0.155133091835582,
+            "p": 3.0436152006242568e-12
+          },
+          "n_sentences": {
+            "r": -0.25021969005665723,
+            "p": 6.288097878774209e-30
+          }
+        },
+        "spearman": {
+          "avg_degree": {
+            "r": 0.1033332417287103,
+            "p": 3.6440583358672725e-06
+          },
+          "clustering_coefficient": {
+            "r": 0.13223977984860377,
+            "p": 2.9146773381771196e-09
+          },
+          "graph_density": {
+            "r": 0.27080671099309767,
+            "p": 5.908363888757163e-35
+          },
+          "num_nodes": {
+            "r": -0.19906166166573894,
+            "p": 2.544761483409098e-19
+          },
+          "n_sentences": {
+            "r": -0.30217223218613837,
+            "p": 1.6883358972789598e-43
+          }
+        }
+      },
+      "per_theta_r2": {
+        "0.6": 0.10517661491032682,
+        "0.7": 0.08646374847151739,
+        "0.8": 0.08998514856364814,
+        "0.9": 0.10046996018983756
+      }
+    },
+    "segment_analysis": {
+      "cnn": {
+        "percolation@0.6": {
+          "mean": 0.7626071451884975,
+          "std": 0.12725740775598388,
+          "n": 1020
+        },
+        "percolation@0.7": {
+          "mean": 0.8052559246513752,
+          "std": 0.11583320027179017,
+          "n": 1020
+        },
+        "percolation@0.8": {
+          "mean": 0.8392167093718609,
+          "std": 0.1060795253083846,
+          "n": 1020
+        },
+        "percolation@0.9": {
+          "mean": 0.8671815382008797,
+          "std": 0.09573518917672162,
+          "n": 1020
+        },
+        "fixed@10pct": {
+          "mean": 0.46923451161202706,
+          "std": 0.14945517923739843,
+          "n": 1020
+        },
+        "fixed@20pct": {
+          "mean": 0.6073598509251993,
+          "std": 0.14713761597633693,
+          "n": 1020
+        },
+        "fixed@30pct": {
+          "mean": 0.6912890534243065,
+          "std": 0.13800750716201043,
+          "n": 1020
+        }
+      },
+      "dailymail": {
+        "percolation@0.6": {
+          "mean": 0.8138413830736927,
+          "std": 0.1005547049592002,
+          "n": 980
+        },
+        "percolation@0.7": {
+          "mean": 0.8463172747102479,
+          "std": 0.09073138963155959,
+          "n": 980
+        },
+        "percolation@0.8": {
+          "mean": 0.8737699512896818,
+          "std": 0.08141062308368782,
+          "n": 980
+        },
+        "percolation@0.9": {
+          "mean": 0.8934497704111977,
+          "std": 0.07438406893506434,
+          "n": 980
+        },
+        "fixed@10pct": {
+          "mean": 0.5649223624790626,
+          "std": 0.1336933002132762,
+          "n": 980
+        },
+        "fixed@20pct": {
+          "mean": 0.6949607788380704,
+          "std": 0.12324838168245604,
+          "n": 980
+        },
+        "fixed@30pct": {
+          "mean": 0.7666686290513184,
+          "std": 0.11144791267606756,
+          "n": 980
+        }
+      }
+    }
+  },
+  "metrics_agg": {
+    "n_documents": 2000,
+    "best_percolation_rouge1r_mean": 0.8800529719839355,
+    "best_fixed_rouge1r_mean": 0.7282250454815423,
+    "rouge1_recall_improvement": 0.15182792650239318,
+    "compression_ratio_mean": 0.7781767715737826,
+    "compression_ratio_std": 0.08335260163911332,
+    "std_exceeds_10pp": 0.0,
+    "regression_r2": 0.10046996018983756,
+    "best_percolation_theta": 0.9,
+    "best_fixed_ratio": 0.3,
+    "hypothesis_supported": 0.0,
+    "rouge1_significant": 1.0,
+    "p_best_pair_wilcoxon": 0.0,
+    "percolation_at_0_6_rouge1_r_mean": 0.7877119217522431,
+    "percolation_at_0_6_rouge2_r_mean": 0.3901979342092884,
+    "percolation_at_0_6_rougeL_r_mean": 0.5441669494904083,
+    "percolation_at_0_7_rouge1_r_mean": 0.8253759861802228,
+    "percolation_at_0_7_rouge2_r_mean": 0.42771524656445037,
+    "percolation_at_0_7_rougeL_r_mean": 0.5821756216330971,
+    "percolation_at_0_8_rouge1_r_mean": 0.856147797911593,
+    "percolation_at_0_8_rouge2_r_mean": 0.4618278739388252,
+    "percolation_at_0_8_rougeL_r_mean": 0.6132036350121072,
+    "percolation_at_0_9_rouge1_r_mean": 0.8800529719839355,
+    "percolation_at_0_9_rouge2_r_mean": 0.4877056931586665,
+    "percolation_at_0_9_rougeL_r_mean": 0.6375561386510303,
+    "fixed_at_10pct_rouge1_r_mean": 0.5161215585368746,
+    "fixed_at_10pct_rouge2_r_mean": 0.1929448014130456,
+    "fixed_at_10pct_rougeL_r_mean": 0.3295537041892127,
+    "fixed_at_20pct_rouge1_r_mean": 0.650284305602506,
+    "fixed_at_20pct_rouge2_r_mean": 0.2761185920141624,
+    "fixed_at_20pct_rougeL_r_mean": 0.42784907853140125,
+    "fixed_at_30pct_rouge1_r_mean": 0.7282250454815423,
+    "fixed_at_30pct_rouge2_r_mean": 0.33709773946473687,
+    "fixed_at_30pct_rougeL_r_mean": 0.4913396213277761
+  },
+  "datasets": [
+    {
+      "dataset": "cnn_dailymail",
+      "examples": [
+        {
+          "input": "doc_id=0 source=cnn_dailymail n_sentences=15",
+          "output": "{\"0.6\": {\"k_star\": 7, \"compression_ratio\": 0.4666666666666667, \"rouge1_r\": 0.7692307692307693, \"rouge2_r\": 0.45098039215686275, \"rougeL_r\": 0.5384615384615384, \"rouge1_p\": 0.20304568527918782, \"rouge2...",
+          "eval_rouge1r_perc_0_6": 0.7692307692307693,
+          "eval_compression_perc_0_6": 0.4666666666666667,
+          "eval_rouge1r_perc_0_7": 0.8076923076923077,
+          "eval_compression_perc_0_7": 0.7333333333333333,
+          "eval_rouge1r_perc_0_8": 0.8076923076923077,
+          "eval_compression_perc_0_8": 0.8,
+          "eval_rouge1r_perc_0_9": 0.9230769230769231,
+          "eval_compression_perc_0_9": 0.9333333333333333,
+          "eval_rouge1r_fixed_10pct": 0.6730769230769231,
+          "eval_rouge1r_fixed_20pct": 0.7307692307692307,
+          "eval_rouge1r_fixed_30pct": 0.75,
+          "predict_percolation_summary": "0.9333333333333333"
+        },
+        {
+          "input": "doc_id=1 source=cnn_dailymail n_sentences=34",
+          "output": "{\"0.6\": {\"k_star\": 18, \"compression_ratio\": 0.5294117647058824, \"rouge1_r\": 0.75, \"rouge2_r\": 0.4444444444444444, \"rougeL_r\": 0.5714285714285714, \"rouge1_p\": 0.04719101123595506, \"rouge2_p\": 0.0270270...",
+          "eval_rouge1r_perc_0_6": 0.75,
+          "eval_compression_perc_0_6": 0.5294117647058824,
+          "eval_rouge1r_perc_0_7": 0.75,
+          "eval_compression_perc_0_7": 0.6176470588235294,
+          "eval_rouge1r_perc_0_8": 0.9642857142857143,
+          "eval_compression_perc_0_8": 0.7647058823529411,
+          "eval_rouge1r_perc_0_9": 0.9642857142857143,
+          "eval_compression_perc_0_9": 0.8823529411764706,
+          "eval_rouge1r_fixed_10pct": 0.21428571428571427,
+          "eval_rouge1r_fixed_20pct": 0.5357142857142857,
+          "eval_rouge1r_fixed_30pct": 0.6785714285714286,
+          "predict_percolation_summary": "0.8823529411764706"
+        },
+        {
+          "input": "doc_id=2 source=cnn_dailymail n_sentences=30",
+          "output": "{\"0.6\": {\"k_star\": 14, \"compression_ratio\": 0.4666666666666667, \"rouge1_r\": 0.6226415094339622, \"rouge2_r\": 0.17307692307692307, \"rougeL_r\": 0.3584905660377358, \"rouge1_p\": 0.07951807228915662, \"rouge...",
+          "eval_rouge1r_perc_0_6": 0.6226415094339622,
+          "eval_compression_perc_0_6": 0.4666666666666667,
+          "eval_rouge1r_perc_0_7": 0.6226415094339622,
+          "eval_compression_perc_0_7": 0.5666666666666667,
+          "eval_rouge1r_perc_0_8": 0.6792452830188679,
+          "eval_compression_perc_0_8": 0.6333333333333333,
+          "eval_rouge1r_perc_0_9": 0.7735849056603774,
+          "eval_compression_perc_0_9": 0.8,
+          "eval_rouge1r_fixed_10pct": 0.41509433962264153,
+          "eval_rouge1r_fixed_20pct": 0.5471698113207547,
+          "eval_rouge1r_fixed_30pct": 0.6037735849056604,
+          "predict_percolation_summary": "0.8"
+        }
+      ]
+    }
+  ]
+}

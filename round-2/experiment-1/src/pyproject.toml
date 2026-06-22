@@ -1,0 +1,15 @@
+[project]
+name = "percolation-summarization"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets==5.0.0",
+    "rouge-score==0.1.2",
+    "nltk==3.9.4",
+    "scikit-learn==1.9.0",
+    "networkx==3.6.1",
+    "numpy==2.5.0",
+    "pandas==3.0.3",
+    "scipy==1.18.0",
+    "loguru==0.7.3",
+]

@@ -1,0 +1,18 @@
+{
+  "title": "CNN/DailyMail 3.0.0 — 2000 News Article/Summary Pairs for Extractive Summarization",
+  "layman_summary": "This artifact downloads the standard CNN/DailyMail news summarization benchmark and prepares 2000 test-set article/highlight pairs for evaluating word-frequency-based extractive summarization methods.",
+  "summary": "Dataset: CNN/DailyMail 3.0.0 (abisee/cnn_dailymail on HuggingFace, 260k downloads, well-established NLP benchmark).\n\nContent: 2000 test-split examples from the CNN/DailyMail dataset. Each example has:\n- input: full news article text (mean 575 words, range 73–1846 words)\n- output: multi-sentence bullet-point highlights (mean 42 words, typically 2–5 sentences separated by newlines)\n- metadata_id: e.g. 'cnndm_test_0000'\n- metadata_task_type: 'summarization'\n- metadata_source_id: original SHA1 article id\n\nWhy CNN/DailyMail over XSum: CNN/DM highlights are multi-sentence extractive-style summaries (mean 42 words) that map naturally to extractive evaluation; XSum summaries are single-sentence abstractive (mean 21 words) less suitable for word-frequency extractive methods. CNN/DM articles are also longer (575 vs 384 mean words), providing more signal for frequency-based sentence scoring.\n\nFormat: JSON following exp_sel_data_out schema — {datasets: [{dataset, examples: [{input, output, metadata_*}]}]}. Schema validation: PASSED.\n\nFiles:\n- full_data_out.json: 2000 examples (7.5MB, well under 100MB limit)\n- mini_data_out.json: first 3 examples (12KB)\n- preview_data_out.json: first 3 examples with strings truncated to 200 chars (2.4KB)\n- data.py: reproducible loader script using standard library + loguru",
+  "out_expected_files": {
+    "script": "data.py",
+    "datasets": [
+      {
+        "full": ["full_data_out.json"],
+        "mini": "mini_data_out.json",
+        "preview": "preview_data_out.json"
+      }
+    ]
+  },
+  "upload_ignore_regexes": [
+    "(^|/)temp/"
+  ]
+}

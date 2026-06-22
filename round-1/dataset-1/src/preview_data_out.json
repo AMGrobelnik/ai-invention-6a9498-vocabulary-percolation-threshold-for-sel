@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "description": "CNN/DailyMail 3.0.0 test split — 2000 news article/summary pairs for extractive summarization",
+    "task": "single-document news summarization",
+    "source": "abisee/cnn_dailymail",
+    "config": "3.0.0",
+    "split": "test",
+    "n_examples": 2000
+  },
+  "datasets": [
+    {
+      "dataset": "cnn_dailymail",
+      "examples": [
+        {
+          "input": "(CNN)The Palestinian Authority officially became the 123rd member of the International Criminal Court on Wednesday, a step that gives the court jurisdiction over alleged crimes in Palestinian territor...",
+          "output": "Membership gives the ICC jurisdiction over alleged crimes committed in Palestinian territories since last June .\nIsrael and the United States opposed the move, which could open the door to war crimes ...",
+          "metadata_id": "cnndm_test_0000",
+          "metadata_row_index": 0,
+          "metadata_task_type": "summarization",
+          "metadata_source_id": "f001ec5c4704938247d27a44948eebb37ae98d01"
+        },
+        {
+          "input": "(CNN)Never mind cats having nine lives. A stray pooch in Washington State has used up at least three of her own after being hit by a car, apparently whacked on the head with a hammer in a misguided me...",
+          "output": "Theia, a bully breed mix, was apparently hit by a car, whacked with a hammer and buried in a field .\n\"She's a true miracle dog and she deserves a good life,\" says Sara Mellado, who is looking for a ho...",
+          "metadata_id": "cnndm_test_0001",
+          "metadata_row_index": 1,
+          "metadata_task_type": "summarization",
+          "metadata_source_id": "230c522854991d053fe98a718b1defa077a8efef"
+        },
+        {
+          "input": "(CNN)If you've been following the news lately, there are certain things you doubtless know about Mohammad Javad Zarif. He is, of course, the Iranian foreign minister. He has been U.S. Secretary of Sta...",
+          "output": "Mohammad Javad Zarif has spent more time with John Kerry than any other foreign minister .\nHe once participated in a takeover of the Iranian Consulate in San Francisco .\nThe Iranian foreign minister t...",
+          "metadata_id": "cnndm_test_0002",
+          "metadata_row_index": 2,
+          "metadata_task_type": "summarization",
+          "metadata_source_id": "4495ba8f3a340d97a9df1476f8a35502bcce1f69"
+        }
+      ]
+    }
+  ]
+}

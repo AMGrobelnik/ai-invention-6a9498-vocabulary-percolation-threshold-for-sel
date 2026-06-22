@@ -1,0 +1,15 @@
+{
+  "title": "Percolation Summarization: TF/TF-IDF vs Fixed-Ratio on CNN/DM (2000 docs)",
+  "layman_summary": "This experiment tests whether a graph-based 'percolation threshold' approach—selecting just enough sentences until the vocabulary network becomes well-connected—outperforms simply taking a fixed percentage of sentences, evaluated on 2000 CNN/DailyMail news articles with two scoring methods.",
+  "summary": "Experiment: Percolation-threshold vs fixed-ratio extractive summarization on CNN/DailyMail (2000 docs), with TF and TF-IDF sentence scoring. Multi-News was attempted but unavailable (HF deprecated custom dataset scripts); results are CNN/DM only per fallback plan.\n\nMethod: For each document, a word co-occurrence graph is built from content words. Sentences are added greedily (highest-scoring first) to a summary graph; percolation threshold k* = minimum sentences needed for the summary graph's largest connected component (GCC) to reach fraction theta (0.6, 0.7, 0.8, 0.9) of the full document GCC. Compared against fixed-ratio baselines (10%, 20%, 30% of sentences). Two scorers: TF (term frequency) and TF-IDF (sklearn TfidfVectorizer, sentences as documents).\n\nOutput schema: exp_gen_sol_out — each example has input (article text), output (reference summary), predict_* fields (actual extracted summary text for 14 method variants: 2 scorers × 4 thetas + 2 scorers × 3 fixed ratios), and metadata_* fields (doc_id, corpus, n_sentences, full_gcc, graph features, ROUGE-1/2/L F/R/P scores, compression_ratio, ceiling_hit per variant). Top-level metadata contains aggregate statistics (mean/std ROUGE and compression_ratio per variant) and R² analysis (linear regression of compression_ratio on graph structural features).\n\nKey results (CNN/DM n=2000):\n- TF fixed@10%: ROUGE-1-F=0.274, ROUGE-2-F=0.092 (strong low-compression baseline)\n- TF fixed@20%: ROUGE-1-F=0.284, ROUGE-2-F=0.107 (best ROUGE-1-F overall)\n- TF percolation theta=0.6: CR=0.597, ROUGE-1-F=0.187 — adaptive method uses ~60% of sentences to achieve 60% GCC coverage\n- TF percolation theta=0.9: CR=0.866, ROUGE-1-F=0.150 — must include nearly all sentences to reach 90% GCC coverage\n- TF-IDF percolation theta=0.6: CR=0.369, ROUGE-1-F=0.205 — TF-IDF achieves lower compression than TF at matched theta\n- TF-IDF percolation theta=0.9: CR=0.726, ROUGE-1-F=0.156\n- ceiling_hit_frac=0.0 for all thetas (GCC always reaches target on CNN/DM single-topic docs)\n- Fixed-ratio baselines outperform percolation on ROUGE at matched compression, showing percolation's adaptive stopping does not improve extractive quality over naive selection on this corpus.\n\nFiles: method.py (722 lines), full_method_out.json (72MB, 2000 examples), mini_method_out.json (3 examples), preview_method_out.json (3 examples, strings truncated). All validated against exp_gen_sol_out schema.",
+  "out_expected_files": {
+    "script": "method.py",
+    "full_output": "full_method_out.json",
+    "mini_output": "mini_method_out.json",
+    "preview_output": "preview_method_out.json"
+  },
+  "upload_ignore_regexes": [
+    "(^|/)logs/",
+    "(^|/)\\.venv/"
+  ]
+}

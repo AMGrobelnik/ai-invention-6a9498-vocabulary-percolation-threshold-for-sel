@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "method_name": "PercolationThresholdExtractSummarizer",
+    "description": "Word-frequency extractive summarizer using percolation threshold on vocabulary co-occurrence graph",
+    "thetas": [
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "fixed_ratios": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "n_docs": 2000,
+    "aggregate": {
+      "n_docs": 2000,
+      "percolation_0.6": {
+        "mean_rouge1_f": 0.2011,
+        "std_rouge1_f": 0.1031,
+        "mean_rouge2_f": 0.0955,
+        "std_rouge2_f": 0.0738,
+        "mean_rougeL_f": 0.1396,
+        "std_rougeL_f": 0.0796,
+        "mean_rouge1_r": 0.7585,
+        "std_rouge1_r": 0.1262,
+        "mean_rouge2_r": 0.3538,
+        "std_rouge2_r": 0.17,
+        "mean_rougeL_r": 0.5303,
+        "std_rougeL_r": 0.142,
+        "mean_compression_ratio": 0.4164,
+        "std_compression_ratio": 0.0811,
+        "min_compression": 0.1481,
+        "max_compression": 0.8873,
+        "p25_compression": 0.3636,
+        "p75_compression": 0.4615
+      },
+      "percolation_0.7": {
+        "mean_rouge1_f": 0.1833,
+        "std_rouge1_f": 0.0968,
+        "mean_rouge2_f": 0.0908,
+        "std_rouge2_f": 0.0697,
+        "mean_rougeL_f": 0.1293,
+        "std_rougeL_f": 0.075,
+        "mean_rouge1_r": 0.796,
+        "std_rouge1_r": 0.1163,
+        "mean_rouge2_r": 0.3874,
+        "std_rouge2_r": 0.1727,
+        "mean_rougeL_r": 0.5653,
+        "std_rougeL_r": 0.1401,
+        "mean_compression_ratio": 0.5175,
+        "std_compression_ratio": 0.087,
+        "min_compression": 0.1818,
+        "max_compression": 0.9155,
+        "p25_compression": 0.4615,
+        "p75_compression": 0.5714
+      },
+      "percolation_0.8": {
+        "mean_rouge1_f": 0.1678,
+        "std_rouge1_f": 0.0913,
+        "mean_rouge2_f": 0.086,
+        "std_rouge2_f": 0.0659,
+        "mean_rougeL_f": 0.12,
+        "std_rougeL_f": 0.0711,
+        "mean_rouge1_r": 0.8255,
+        "std_rouge1_r": 0.1075,
+        "mean_rouge2_r": 0.4165,
+        "std_rouge2_r": 0.1733,
+        "mean_rougeL_r": 0.5943,
+        "std_rougeL_r": 0.1376,
+        "mean_compression_ratio": 0.6289,
+        "std_compression_ratio": 0.0916,
+        "min_compression": 0.2308,
+        "max_compression": 1.0,
+        "p25_compression": 0.5714,
+        "p75_compression": 0.6818
+      },
+      "percolation_0.9": {
+        "mean_rouge1_f": 0.1542,
+        "std_rouge1_f": 0.0854,
+        "mean_rouge2_f": 0.0811,
+        "std_rouge2_f": 0.062,
+        "mean_rougeL_f": 0.1111,
+        "std_rougeL_f": 0.0668,
+        "mean_rouge1_r": 0.8525,
+        "std_rouge1_r": 0.0969,
+        "mean_rouge2_r": 0.4426,
+        "std_rouge2_r": 0.1743,
+        "mean_rougeL_r": 0.6188,
+        "std_rougeL_r": 0.1367,
+        "mean_compression_ratio": 0.7617,
+        "std_compression_ratio": 0.0893,
+        "min_compression": 0.3077,
+        "max_compression": 1.0,
+        "p25_compression": 0.7083,
+        "p75_compression": 0.8148
+      },
+      "fixed_0.1": {
+        "mean_rouge1_f": 0.2861,
+        "std_rouge1_f": 0.1209,
+        "mean_rouge2_f": 0.1075,
+        "std_rouge2_f": 0.0923,
+        "mean_rougeL_f": 0.1872,
+        "std_rougeL_f": 0.0937,
+        "mean_rouge1_r": 0.504,
+        "std_rouge1_r": 0.1568,
+        "mean_rouge2_r": 0.182,
+        "std_rouge2_r": 0.1364,
+        "mean_rougeL_r": 0.3298,
+        "std_rougeL_r": 0.1292
+      },
+      "fixed_0.2": {
+        "mean_rouge1_f": 0.2514,
+        "std_rouge1_f": 0.1182,
+        "mean_rouge2_f": 0.1048,
+        "std_rouge2_f": 0.083,
+        "mean_rougeL_f": 0.1681,
+        "std_rougeL_f": 0.0882,
+        "mean_rouge1_r": 0.63,
+        "std_rouge1_r": 0.1512,
+        "mean_rouge2_r": 0.2566,
+        "std_rouge2_r": 0.1545,
+        "mean_rougeL_r": 0.4244,
+        "std_rougeL_r": 0.1389
+      },
+      "fixed_0.3": {
+        "mean_rouge1_f": 0.2219,
+        "std_rouge1_f": 0.1118,
+        "mean_rouge2_f": 0.1004,
+        "std_rouge2_f": 0.0791,
+        "mean_rougeL_f": 0.152,
+        "std_rougeL_f": 0.0852,
+        "mean_rouge1_r": 0.7068,
+        "std_rouge1_r": 0.1401,
+        "mean_rouge2_r": 0.3132,
+        "std_rouge2_r": 0.1663,
+        "mean_rougeL_r": 0.4875,
+        "std_rougeL_r": 0.1429
+      },
+      "statistical_tests": {
+        "best_perc_theta": 0.6,
+        "best_fixed_ratio": 0.1,
+        "best_perc_vs_best_fixed_rouge1_f": {
+          "t_stat": -46.9262,
+          "p_value": 0.0,
+          "wilcoxon_p": 0.0,
+          "mean_diff": -0.085
+        }
+      },
+      "correlation_perc_ratio_vs_avg_degree": {
+        "pearson_r": 0.0946,
+        "pearson_p": 2.3e-05,
+        "spearman_r": 0.1105,
+        "spearman_p": 1e-06
+      },
+      "correlation_perc_ratio_vs_clustering": {
+        "pearson_r": 0.1137,
+        "pearson_p": 0.0,
+        "spearman_r": 0.088,
+        "spearman_p": 8.1e-05
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "cnn_dailymail_3_0_0_test",
+      "examples": [
+        {
+          "input": "doc_id=0|n_sentences=27",
+          "output": "full_gcc=214|avg_degree=17.7383|clustering=0.882",
+          "predict_percolation_0_6": "rouge1_f=0.1627|rouge2_f=0.0950|rougeL_f=0.1312|compression=0.4444|k_star=12",
+          "predict_percolation_0_7": "rouge1_f=0.1366|rouge2_f=0.0796|rougeL_f=0.1189|compression=0.5926|k_star=16",
+          "predict_percolation_0_8": "rouge1_f=0.1230|rouge2_f=0.0717|rougeL_f=0.1111|compression=0.7037|k_star=19",
+          "predict_percolation_0_9": "rouge1_f=0.1105|rouge2_f=0.0624|rougeL_f=0.0967|compression=0.8889|k_star=24",
+          "predict_fixed_0_1": "rouge1_f=0.2639|rouge2_f=0.0986|rougeL_f=0.2222|k_used=3",
+          "predict_fixed_0_2": "rouge1_f=0.2321|rouge2_f=0.1171|rougeL_f=0.1875|k_used=6",
+          "predict_fixed_0_3": "rouge1_f=0.1748|rouge2_f=0.0847|rougeL_f=0.1359|k_used=9",
+          "metadata_doc_id": 0,
+          "metadata_n_sentences": 27,
+          "metadata_full_gcc": 214,
+          "metadata_avg_degree": 17.7383,
+          "metadata_clustering": 0.882
+        },
+        {
+          "input": "doc_id=1|n_sentences=19",
+          "output": "full_gcc=179|avg_degree=15.2067|clustering=0.9263",
+          "predict_percolation_0_6": "rouge1_f=0.2251|rouge2_f=0.0647|rougeL_f=0.1543|compression=0.4211|k_star=8",
+          "predict_percolation_0_7": "rouge1_f=0.2000|rouge2_f=0.0575|rougeL_f=0.1429|compression=0.5263|k_star=10",
+          "predict_percolation_0_8": "rouge1_f=0.1809|rouge2_f=0.0606|rougeL_f=0.1307|compression=0.6842|k_star=13",
+          "predict_percolation_0_9": "rouge1_f=0.1831|rouge2_f=0.1011|rougeL_f=0.1373|compression=0.8421|k_star=16",
+          "predict_fixed_0_1": "rouge1_f=0.2162|rouge2_f=0.0367|rougeL_f=0.1441|k_used=2",
+          "predict_fixed_0_2": "rouge1_f=0.3404|rouge2_f=0.1075|rougeL_f=0.2447|k_used=4",
+          "predict_fixed_0_3": "rouge1_f=0.2734|rouge2_f=0.0787|rougeL_f=0.1875|k_used=6",
+          "metadata_doc_id": 1,
+          "metadata_n_sentences": 19,
+          "metadata_full_gcc": 179,
+          "metadata_avg_degree": 15.2067,
+          "metadata_clustering": 0.9263
+        },
+        {
+          "input": "doc_id=2|n_sentences=39",
+          "output": "full_gcc=261|avg_degree=13.542|clustering=0.8959",
+          "predict_percolation_0_6": "rouge1_f=0.1256|rouge2_f=0.0748|rougeL_f=0.1023|compression=0.4103|k_star=16",
+          "predict_percolation_0_7": "rouge1_f=0.1084|rouge2_f=0.0645|rougeL_f=0.0924|compression=0.5128|k_star=20",
+          "predict_percolation_0_8": "rouge1_f=0.1025|rouge2_f=0.0763|rougeL_f=0.0760|compression=0.6923|k_star=27",
+          "predict_percolation_0_9": "rouge1_f=0.0927|rouge2_f=0.0690|rougeL_f=0.0688|compression=0.7949|k_star=31",
+          "predict_fixed_0_1": "rouge1_f=0.2069|rouge2_f=0.0839|rougeL_f=0.1241|k_used=4",
+          "predict_fixed_0_2": "rouge1_f=0.1647|rouge2_f=0.0791|rougeL_f=0.1176|k_used=8",
+          "predict_fixed_0_3": "rouge1_f=0.1330|rouge2_f=0.0695|rougeL_f=0.1011|k_used=12",
+          "metadata_doc_id": 2,
+          "metadata_n_sentences": 39,
+          "metadata_full_gcc": 261,
+          "metadata_avg_degree": 13.542,
+          "metadata_clustering": 0.8959
+        }
+      ]
+    }
+  ]
+}

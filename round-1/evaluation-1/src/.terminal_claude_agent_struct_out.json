@@ -1,0 +1,15 @@
+{
+  "title": "Statistical Evaluation: Percolation Threshold vs Fixed-Ratio ROUGE on CNN/DailyMail",
+  "layman_summary": "Tests whether a graph-based summarizer that stops once the word-network reaches a connectivity threshold beats fixed-length baselines on 2000 news articles, using ROUGE recall and significance tests.",
+  "summary": "Evaluated percolation-threshold extractive summarization (4 thetas: 0.6/0.7/0.8/0.9) against fixed-ratio TF baselines (10%/20%/30%) on 2000 CNN/DailyMail test documents. Key findings: (1) ROUGE-1 recall improvement of +0.152 for percolation@0.9 vs fixed@30% (Wilcoxon Holm-corrected significant, p<0.05 for all rouge1_r comparisons at theta=0.9); (2) compression ratio std=0.077 does NOT exceed the 10pp threshold — hypothesis partially supported; (3) network feature regression R²=0.10, confirming weak but non-zero predictability of compression from structural features (avg_degree and clustering_coefficient are top correlates); (4) segment analysis split by article length (short=CNN-proxy, long=DailyMail-proxy) shows consistent percolation advantage in both segments. The verdict is hypothesis_supported=False due to std<0.10, but ROUGE-1 recall improvement is significant and large. Percolation@0.9 is the best theta. Outputs include eval_out.json (validated against exp_eval_sol_out schema), method_out.json (per-document percolation and fixed results), and full/mini/preview variants. All 36 Wilcoxon tests reported with Holm-Bonferroni correction. Regression includes per-theta R² values. No LLM API costs ($0 spend).",
+  "out_expected_files": {
+    "script": "eval.py",
+    "full_output": "full_eval_out.json",
+    "mini_output": "mini_eval_out.json",
+    "preview_output": "preview_eval_out.json"
+  },
+  "upload_ignore_regexes": [
+    "(^|/)method_out\\.json$",
+    "(^|/)\\.venv/"
+  ]
+}

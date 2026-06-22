@@ -1,0 +1,14 @@
+{
+  "title": "Vocabulary Percolation Threshold for Extractive Summary Length",
+  "summary": "Generated a complete 10-page publication-ready LaTeX paper on vocabulary co-occurrence graph percolation as a self-calibrating stopping criterion for extractive summarization. The paper covers: Introduction (motivation and contributions), Related Work (extractive summarization, graph percolation in NLP, CNN/DM and Multi-News benchmarks), Methods (vocabulary graph construction, TF/TF-IDF sentence scoring, percolation stopping criterion, fixed-ratio baselines), Experiments (datasets/evaluation, main CNN/DailyMail results with Table 1, Multi-News evaluation with Table 2, compression ratio analysis, network feature regression), Discussion (why percolation fails F1, corpus-conditional behavior, implications, limitations), and Conclusion. All 3 figures from available_figures are included: fig_pipeline_v0.jpg (full-width pipeline diagram on page 2), fig_rouge_cnndm_v0.jpg (dual bar chart F1 vs recall on page 6), and fig_cross_corpus_v0.jpg (compression ratio and F1 cross-corpus on page 7). Bibliography includes 13 entries fetched via Semantic Scholar (Erkan2004, Nallapati2017, Liu2019bert, Liu2019presumm, Fabbri2019, Hermann2015, See2017) plus manually written classic entries (Luhn1958, Mihalcea2004, ErdosRenyi1960, Bollobas2001, Page1999, Ryang2012). Compiled successfully with pdflatex/bibtex.original/pdflatex/pdflatex sequence. Visual review of all 10 pages confirmed clean layout, properly rendered figures, correctly formatted tables, and complete reference list with no layout issues.",
+  "out_expected_files": {
+    "paper_tex_path": "paper.tex",
+    "paper_pdf_path": "paper.pdf",
+    "references_bib_path": "references.bib",
+    "figure_paths": [
+      "figures/fig_pipeline_v0.jpg",
+      "figures/fig_rouge_cnndm_v0.jpg",
+      "figures/fig_cross_corpus_v0.jpg"
+    ]
+  }
+}
